@@ -47,4 +47,30 @@ function downloadExcel() {
   link.download = "rapor_otomatis.csv";
   link.click();
 }
+function uploadCSV() {
+  const fileInput = document.getElementById("fileInput");
+  const file = fileInput.files[0];
+  if (!file) {
+    alert("Silakan pilih file CSV terlebih dahulu!");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const content = e.target.result;
+    const rows = content.split("\n").slice(1); // skip header
+    const table = document.getElementById("studentTable");
+
+    rows.forEach((row, index) => {
+      if (row.trim() !== "") {
+        const cols = row.split(",");
+        const newRow = table.insertRow();
+        newRow.innerHTML = `<td>${table.rows.length}</td>
+                            <td>${cols[0] || ""}</td>
+                            <td>${cols[1] || ""}</td>`;
+      }
+    });
+  };
+  reader.readAsText(file);
+}
 
