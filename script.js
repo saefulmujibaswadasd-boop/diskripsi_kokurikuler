@@ -201,3 +201,13 @@ function generatePenggalang(nama, skorKepemimpinan, skorKemandirian, skorKeteram
     + penggalang.kontribusi[skorKontribusi-1]
     + ". Dengan semangat berlatih dan dukungan guru serta orang tua, Ananda " + nama + " berpotensi berkembang menjadi penggalang yang mandiri, terampil, peduli, dan berjiwa kepemimpinan.";
 }
+function showSiaga() {
+  const nama = document.getElementById("namaSiaga").value;
+  const sd = document.getElementById("sd").value;
+  const sk = document.getElementById("sk").value;
+  const st = document.getElementById("st").value;
+  const ss = document.getElementById("ss").value;
+
+  const hasil = generateSiaga(nama, sd, sk, st, ss);
+  document.getElementById("siagaOutput").innerText = hasil;
+}
