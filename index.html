@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Rapor Otomatis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="loginPage" class="login-container">
+    <div class="login-card">
+      <h2>🔐 Login Dashboard</h2>
+      <p>Masukkan sandi untuk mengakses sistem</p>
+      <input type="password" id="password" placeholder="Masukkan Sandi">
+      <button onclick="login()">Masuk</button>
+      <p id="loginError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="hidden">
+    <!-- Header -->
+    <header class="header">
+      <h1>📘 Sistem Rapor Otomatis</h1>
+      <p>SD Negeri Wonokerto</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#kokurikuler">Diskripsi Kokurikuler</a></li>
+        <li class="dropdown">
+          <a href="#">Diskripsi Ekstrakurikuler ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#siaga">Pramuka Siaga</a></li>
+            <li><a href="#penggalang">Pramuka Penggalang</a></li>
+          </ul>
+        </li>
+        <li><a href="#catatan">Catatan Wali Kelas</a></li>
+      </ul>
+    </nav>
+
+    <!-- Upload Data Siswa -->
+    <main class="container">
+      <div class="card" id="upload">
+        <h2>📂 Upload Data Siswa</h2>
+        <table>
+          <thead>
+            <tr><th>No</th><th>Nama Siswa</th><th>NIS</th></tr>
+          </thead>
+          <tbody id="studentTable">
+            <tr>
+              <td>1</td><td><input type="text" placeholder="Nama"></td><td><input type="text" placeholder="NIS"></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn" onclick="addStudent()">Tambah Siswa</button>
+      </div>
+
+      <!-- Card Kokurikuler -->
+      <div class="card" id="kokurikuler">
+        <h2>📘 Diskripsi Kokurikuler</h2>
+        <div id="kokurikulerOutput"></div>
+      </div>
+
+      <!-- Card Ekstrakurikuler -->
+      <div class="card" id="siaga">
+        <h2>🏕️ Diskripsi Ekstrakurikuler - Pramuka Siaga</h2>
+        <div id="siagaOutput"></div>
+      </div>
+
+      <div class="card" id="penggalang">
+        <h2>🏕️ Diskripsi Ekstrakurikuler - Pramuka Penggalang</h2>
+        <div id="penggalangOutput"></div>
+      </div>
+
+      <!-- Card Catatan Wali Kelas -->
+      <div class="card" id="catatan">
+        <h2>📝 Catatan Wali Kelas</h2>
+        <input type="number" id="ranking" placeholder="Ranking 1-30">
+        <button class="btn" onclick="generateCatatan()">Generate Catatan</button>
+        <div id="catatanOutput"></div>
+      </div>
+
+      <!-- Download Excel -->
+      <div class="card">
+        <h2>⬇️ Export Hasil</h2>
+        <button class="btn" onclick="downloadExcel()">Download Excel</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 | Dashboard Rapor Otomatis | SD Negeri Wonokerto</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
