@@ -112,3 +112,15 @@ function generateKokurikuler(nama, skorDisiplin, skorKreativitas, skorKepedulian
     + kolaborasi[skorKolaborasi-1]
     + ". Dengan tekun berlatih dan dukungan guru serta orang tua, Ananda " + nama + " berpotensi berkembang menjadi siswa yang disiplin, kreatif, peduli, mandiri, dan kolaboratif.";
 }
+function showKokurikuler() {
+  const nama = document.getElementById("namaSiswa").value;
+  const d = document.getElementById("d").value;
+  const k = document.getElementById("k").value;
+  const ps = document.getElementById("ps").value;
+  const kp = document.getElementById("kp").value;
+  const ki = document.getElementById("ki").value;
+  const kc = document.getElementById("kc").value;
+
+  const hasil = generateKokurikuler(nama, d, k, ps, kp, ki, kc);
+  document.getElementById("kokurikulerOutput").innerText = hasil;
+}
