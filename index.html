@@ -51,7 +51,9 @@
           </thead>
           <tbody id="studentTable">
             <tr>
-              <td>1</td><td><input type="text" placeholder="Nama"></td><td><input type="text" placeholder="NIS"></td>
+              <td>1</td>
+              <td><input type="text" placeholder="Nama"></td>
+              <td><input type="text" placeholder="NIS"></td>
             </tr>
           </tbody>
         </table>
@@ -61,42 +63,40 @@
       <!-- Card Kokurikuler -->
       <div class="card" id="kokurikuler">
         <h2>📘 Diskripsi Kokurikuler</h2>
+        <input type="text" id="namaSiswa" placeholder="Nama Siswa">
+        <select id="d"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="k"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="ps"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="kp"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="ki"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="kc"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button class="btn" onclick="showKokurikuler()">Generate Kokurikuler</button>
         <div id="kokurikulerOutput"></div>
       </div>
-<input type="text" id="namaSiswa" placeholder="Nama Siswa">
-<select id="d"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="k"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="ps"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="kp"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="ki"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="kc"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<button class="btn" onclick="showKokurikuler()">Generate Kokurikuler</button>
-<div id="kokurikulerOutput"></div>
 
-      <!-- Card Ekstrakurikuler -->
+      <!-- Card Ekstrakurikuler Siaga -->
       <div class="card" id="siaga">
         <h2>🏕️ Diskripsi Ekstrakurikuler - Pramuka Siaga</h2>
+        <input type="text" id="namaSiaga" placeholder="Nama Siswa">
+        <select id="sd"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="sk"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="st"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="ss"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button class="btn" onclick="showSiaga()">Generate Siaga</button>
         <div id="siagaOutput"></div>
       </div>
-<input type="text" id="namaSiaga" placeholder="Nama Siswa">
-<select id="sd"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="sk"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="st"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="ss"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<button class="btn" onclick="showSiaga()">Generate Siaga</button>
-<div id="siagaOutput"></div>
 
+      <!-- Card Ekstrakurikuler Penggalang -->
       <div class="card" id="penggalang">
         <h2>🏕️ Diskripsi Ekstrakurikuler - Pramuka Penggalang</h2>
+        <input type="text" id="namaPenggalang" placeholder="Nama Siswa">
+        <select id="pg1"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="pg2"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="pg3"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <select id="pg4"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button class="btn" onclick="showPenggalang()">Generate Penggalang</button>
         <div id="penggalangOutput"></div>
       </div>
-<input type="text" id="namaPenggalang" placeholder="Nama Siswa">
-<select id="pg1"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="pg2"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="pg3"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<select id="pg4"><option>1</option><option>2</option><option>3</option><option>4</option></select>
-<button class="btn" onclick="showPenggalang()">Generate Penggalang</button>
-<div id="penggalangOutput"></div>
 
       <!-- Card Catatan Wali Kelas -->
       <div class="card" id="catatan">
@@ -119,12 +119,11 @@
     </footer>
   </div>
 
+  <!-- Script -->
   <script src="script.js"></script>
-<script src="script.js"></script>
-<script src="modules/kokurikuler.js"></script>
-<script src="modules/siaga.js"></script>
-<script src="modules/penggalang.js"></script>
-<script src="modules/catatan.js"></script>
-
+  <script src="modules/kokurikuler.js"></script>
+  <script src="modules/siaga.js"></script>
+  <script src="modules/penggalang.js"></script>
+  <script src="modules/catatan.js"></script>
 </body>
 </html>
